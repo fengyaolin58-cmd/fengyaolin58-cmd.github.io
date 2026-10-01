@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kaden Kaufman | Social Media Manager</title>
+<meta name="description" content="Portfolio of Kaden Kaufman, social media manager, community moderator, and web builder.">
+<meta property="og:title" content="Kaden Kaufman | Social Media Manager">
+<meta property="og:description" content="Social media manager, community moderator, and web builder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a blue header card, then a single reading column of work rows, skills, and contact. */
+:root{
+  --bg:#F1F5FC;
+  --surface:#FFFFFF;
+  --ink:#0C1B38;
+  --muted:#4F5F7F;
+  --line:#D3DCEC;
+  --gold:#C24E0E;
+  --gold-soft:#FDE3D2;
+  --navy:#1446A0;
+  --on-navy:#F4F7FD;
+  --hot:#FF8A3D;
+  --display:"Chakra Petch", "Rajdhani", "Arial Narrow", system-ui, sans-serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#08122A; --surface:#0F1D3D; --ink:#E6ECF7; --muted:#9AA9C6; --line:#22355F;
+    --gold:#FF8A3D; --gold-soft:#3A2012; --navy:#123A85; --on-navy:#EEF3FC; --hot:#FF8A3D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08122A; --surface:#0F1D3D; --ink:#E6ECF7; --muted:#9AA9C6; --line:#22355F;
+  --gold:#FF8A3D; --gold-soft:#3A2012; --navy:#123A85; --on-navy:#EEF3FC; --hot:#FF8A3D;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.6;padding-inline:16px;padding-block:0 56px}
+.wrap{max-width:960px;margin:0 auto}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* Header card */
+.hero{margin-top:24px;background:var(--navy);color:var(--on-navy);border-radius:4px;overflow:hidden}
+.hero-inner{padding:40px clamp(20px,5vw,56px) 32px;display:grid;gap:18px}
+.hero .label{color:var(--on-navy);opacity:.75}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);font-weight:700;letter-spacing:-.01em}
+.hero h1 span{color:var(--hot)}
+.hero .role{font-family:var(--display);font-size:clamp(1.1rem,2.6vw,1.45rem);font-weight:500;max-width:40ch}
+.hero p{max-width:62ch;margin:0;opacity:.9}
+.contact-line{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:.88rem}
+.contact-line span{user-select:all}
+.bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.bar div{padding:16px clamp(16px,3vw,28px);border-right:1px solid rgba(255,255,255,.14);min-width:0}
+.bar div:last-child{border-right:0}
+.bar b{display:block;font-family:var(--display);font-size:1.7rem;color:var(--hot);font-variant-numeric:tabular-nums;line-height:1.1}
+.bar small{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.stripe{height:6px;background:var(--hot)}
+@media (max-width:640px){.bar{grid-template-columns:repeat(2,1fr)}.bar div:nth-child(2){border-right:0}.bar div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14)}}
+
+section{margin-top:64px}
+.sec-head{display:grid;gap:6px;margin-bottom:24px}
+.sec-head h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700}
+.sec-head p{margin:0;color:var(--muted);max-width:62ch}
+
+/* Work rows */
+.rows{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.row .meta{display:grid;gap:6px;align-content:start}
+.tag{justify-self:start;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--gold-soft);color:var(--ink)}
+.row .body{min-width:0;display:grid;gap:10px}
+.row h3{font-size:1.35rem;font-weight:600}
+.row p{margin:0;max-width:62ch}
+.row ul{margin:0;padding-left:1.1em;display:grid;gap:4px;max-width:62ch}
+.go{font-family:var(--mono);font-size:.82rem;color:var(--gold);text-decoration:none;font-weight:500;justify-self:start}
+.go:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);padding:2px 8px;border-radius:2px;color:var(--muted)}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:12px}}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill{background:var(--surface);padding:20px 22px;display:grid;gap:6px;min-width:0;align-content:start}
+.skill h3{font-size:1.1rem;font-weight:600}
+.skill p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:640px){.skills{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{display:grid;gap:6px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:4px;min-width:0}
+.card .val{font-family:var(--mono);font-size:1rem;overflow-wrap:anywhere;user-select:all}
+.card button{justify-self:start;font:inherit;font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--ink);cursor:pointer}
+.card button:hover{border-color:var(--gold)}
+.links{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.links a{display:grid;gap:2px;padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:4px;text-decoration:none;min-width:0;transition:border-color .15s}
+.links a:hover{border-color:var(--gold)}
+.links a b{font-family:var(--display);font-size:1.05rem;font-weight:600}
+.links a span{font-family:var(--mono);font-size:.75rem;color:var(--muted);overflow-wrap:anywhere}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+<style>body{margin:0;-webkit-font-smoothing:antialiased}img{max-width:100%}</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="label">Portfolio · Social media management</div>
+    <h1>Kaden <span>Kaufman</span></h1>
+    <div class="role">Social media manager, community moderator, and web builder.</div>
+    <p>I've run social media for a college program across six platforms, moderated online communities, shadowed a live streamer, and built a website from the ground up. I help brands and communities show up consistently, grow their audience, and keep the conversation friendly.</p>
+    <div class="contact-line"><span>kadenkaufman58@gmail.com</span><span>(304) 209-0826</span></div>
+  </div>
+  <div class="bar">
+    <div><b>6</b><small>Platforms managed</small></div>
+    <div><b>2</b><small>Communities moderated</small></div>
+    <div><b>1</b><small>Website built &amp; run</small></div>
+    <div><b>4</b><small>Freelance commissions</small></div>
+  </div>
+  <div class="stripe"></div>
+</header>
+
+<section id="work">
+  <div class="sec-head">
+    <span class="label">Experience</span>
+    <h2>What I've worked on</h2>
+  </div>
+  <div class="rows">
+
+    <article class="row">
+      <div class="meta"><span class="tag">Social media</span><span class="label">Previous role</span></div>
+      <div class="body">
+        <h3>Social Media Manager, Catamount Esports at WVU Potomac State</h3>
+        <p>Managed social media for the college's esports program across every channel it runs, with one link hub pointing fans, recruits, and players to the right place.</p>
+        <div class="chips"><span>Facebook</span><span>Instagram</span><span>X</span><span>TikTok</span><span>YouTube</span><span>Twitch</span></div>
+        <ul>
+          <li>Posted and managed content for six public platforms at once</li>
+          <li>Sent followers to the program's community Discord, now 159 members</li>
+          <li>Pointed prospective players to the program's recruitment form</li>
+        </ul>
+        <a class="go" href="https://linktr.ee/wvupsc" target="_blank" rel="noopener">linktr.ee/wvupsc →</a>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="meta"><span class="tag">Live content</span><span class="label">Previous</span></div>
+      <div class="body">
+        <h3>Moderator for streamer KharyVRC</h3>
+        <p>Moderated chat for KharyVRC and shadowed his live streams, seeing firsthand how a creator plans a broadcast, keeps an audience engaged in real time, and handles problems while live.</p>
+        <a class="go" href="https://www.twitch.tv/kharyvrc" target="_blank" rel="noopener">twitch.tv/kharyvrc →</a>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="meta"><span class="tag">Community</span><span class="label">Current</span></div>
+      <div class="body">
+        <h3>Moderator, Kyouki's Casino Discord</h3>
+        <p>Help moderate a 94-member online community, keeping it welcoming and on topic. It's the same work as answering comments, reviews, and messages on a business page: fast, friendly, and professional.</p>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="meta"><span class="tag">Web</span><span class="label">Ongoing</span></div>
+      <div class="body">
+        <h3>Sparks game website</h3>
+        <p>Built and manage the public website for Sparks, a story-driven 2D platformer from a three-person team at Forgotten Stories Studio. The site presents the story, a concept art gallery, development updates, and a path into the studio's Discord.</p>
+        <div class="chips"><span>Web design</span><span>Copywriting</span><span>Image galleries</span></div>
+        <a class="go" href="https://fengyaolin58-cmd.github.io/sparks/" target="_blank" rel="noopener">View the Sparks site →</a>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="meta"><span class="tag">Development</span><span class="label">Freelance</span></div>
+      <div class="body">
+        <h3>Four development commissions and the Lixel engine</h3>
+        <p>Completed four commissioned game development projects to clients' briefs and deadlines, and built Lixel, a game engine made from scratch that Sparks runs on.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-head">
+    <span class="label">Skills</span>
+    <h2>What I bring</h2>
+  </div>
+  <div class="skills">
+    <div class="skill"><h3>Running several platforms at once</h3><p>I've kept six accounts active and consistent for one organization, so no channel falls behind.</p></div>
+    <div class="skill"><h3>Short-form video</h3><p>Vertical clips for Reels, TikTok, and Shorts that show the work and hold attention in the first few seconds.</p></div>
+    <div class="skill"><h3>Responding to people</h3><p>Moderation taught me to answer quickly and calmly, which matters for comments, messages, and reviews.</p></div>
+    <div class="skill"><h3>Website and gallery upkeep</h3><p>I build and run a website, so I can keep a company's blog and project gallery as fresh as its social feeds.</p></div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="sec-head">
+    <span class="label">Contact</span>
+    <h2>Get in touch</h2>
+  </div>
+  <div class="contact">
+    <div class="card">
+      <span class="label">Email</span>
+      <span class="val" id="email">kadenkaufman58@gmail.com</span>
+      <button type="button" id="copy-email" data-target="email">Copy email</button>
+    </div>
+    <div class="card">
+      <span class="label">Phone</span>
+      <span class="val" id="phone">(304) 209-0826</span>
+      <button type="button" id="copy-phone" data-target="phone">Copy number</button>
+    </div>
+  </div>
+  <div class="links">
+    <a href="https://linktr.ee/wvupsc" target="_blank" rel="noopener"><b>Catamount Esports</b><span>Accounts I managed</span></a>
+    <a href="https://fengyaolin58-cmd.github.io/sparks/" target="_blank" rel="noopener"><b>Sparks</b><span>Website I built</span></a>
+    <a href="https://www.twitch.tv/kharyvrc" target="_blank" rel="noopener"><b>KharyVRC</b><span>Streamer I moderated for</span></a>
+  </div>
+</section>
+
+<footer>Kaden Kaufman · Social media portfolio · 2026</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.card button').forEach(function(btn){
+  var original = btn.textContent;
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.target);
+    var text = el.textContent.trim();
+    function selectIt(){
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected, press copy';
+    }
+    try{
+      navigator.clipboard.writeText(text).then(function(){ btn.textContent = 'Copied'; }, selectIt);
+    }catch(e){ selectIt(); }
+    setTimeout(function(){ btn.textContent = original; }, 2000);
+  });
+});
+</script>
+</body>
+</html>
