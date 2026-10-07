@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kaden Kaufman | Portfolio</title>
-<meta name="description" content="Portfolio of Kaden Kaufman, social media manager, community moderator, and web builder.">
+<meta name="description" content="Portfolio of Kaden Kaufman: social media management, game dev, and moderation.">
 <meta property="og:title" content="Kaden Kaufman | Portfolio">
-<meta property="og:description" content="Social media manager, community moderator, and web builder.">
+<meta property="og:description" content="Social media management, game dev, and moderation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a blue header card, then a single reading column of work rows, skills, and contact. */
+/* Layout: a solid navy header card, then a single reading column of work rows, a proposal with a weekly posting schedule, and contact. */
 :root{
   --bg:#F1F5FC;
   --surface:#FFFFFF;
@@ -104,6 +104,36 @@ section{margin-top:64px}
 .links a b{font-family:var(--display);font-size:1.05rem;font-weight:600}
 .links a span{font-family:var(--mono);font-size:.75rem;color:var(--muted);overflow-wrap:anywhere}
 footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+
+/* Showcase */
+.show{display:grid;gap:40px}
+.show-item{display:grid;gap:14px}
+.show-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.show-head h3{font-size:1.35rem;font-weight:600}
+.show-item > p{margin:0;max-width:62ch}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.gallery figure{margin:0;display:grid;gap:6px;min-width:0}
+.gallery figure:first-child{grid-column:1 / -1}
+.gallery button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--surface);cursor:zoom-in}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .25s ease}
+.gallery button:hover img{transform:scale(1.02)}
+.gallery figcaption{display:grid;gap:2px}
+.gallery figcaption .cap-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline}
+.gallery figcaption b{font-family:var(--display);font-size:1rem;font-weight:600}
+.gallery figcaption .price{font-family:var(--mono);font-size:.82rem;font-weight:500;color:var(--gold);font-variant-numeric:tabular-nums}
+.gallery figcaption small{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+@media (max-width:640px){.gallery{grid-template-columns:1fr}}
+.web-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px 20px;padding:20px 22px;background:var(--navy);color:var(--on-navy);border-radius:4px}
+.web-card .icon{width:48px;height:48px;border-radius:50%;background:var(--hot);display:grid;place-items:center}
+.web-card .icon svg{width:22px;height:22px}
+.web-card h3{font-size:1.25rem;font-weight:600}
+.web-card p{margin:4px 0 0;opacity:.88;max-width:56ch}
+.web-card a{font-family:var(--mono);font-size:.82rem;font-weight:500;color:var(--navy);background:var(--hot);padding:10px 14px;border-radius:3px;text-decoration:none;white-space:nowrap}
+.web-card a:hover{filter:brightness(1.08)}
+@media (max-width:640px){.web-card{grid-template-columns:auto 1fr}.web-card a{grid-column:1 / -1;justify-self:start}}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(5,10,25,.92);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));cursor:zoom-out}
+.lightbox img{max-width:100%;max-height:100%;border-radius:4px}
+.lightbox span{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:16px;font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#F4F7FD;opacity:.8}
 </style>
 <style>body{margin:0;-webkit-font-smoothing:antialiased}img{max-width:100%}</style>
 </head>
@@ -112,7 +142,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="label">Portfolio · Social media management</div>
+    <div class="label">Portfolio · Social media management, game dev, and moderator</div>
     <h1>Kaden <span>Kaufman</span></h1>
     <div class="role">Social media manager, community moderator, and web builder.</div>
     <p>I've run social media for a college program across six platforms, moderated online communities, shadowed a live streamer, and built a website from the ground up. I help brands and communities show up consistently, grow their audience, and keep the conversation friendly.</p>
@@ -121,7 +151,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
   <div class="bar">
     <div><b>6</b><small>Platforms managed</small></div>
     <div><b>2</b><small>Communities moderated</small></div>
-    <div><b>1</b><small>Website built &amp; run</small></div>
+    <div><b>2</b><small>Websites built</small></div>
     <div><b>4</b><small>Freelance commissions</small></div>
   </div>
   <div class="stripe"></div>
@@ -187,6 +217,32 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
   </div>
 </section>
 
+<section id="showcase">
+  <div class="sec-head">
+    <span class="label">Showcase</span>
+    <h2>Game dev and 3D work</h2>
+  </div>
+  <div class="show">
+
+    <div class="show-item">
+      <div class="show-head"><h3>3D avatar commissions</h3><span class="label">3 paid commissions</span></div>
+      <p>Paid avatar commissions for clients' original characters, each shown in a front, back, and side reference sheet. Click any image to see it full size.</p>
+      <div class="gallery">
+        <figure><button type="button" data-full="assets/avatar-1.jpg" aria-label="View Chase's cat avatar commission full size"><img src="assets/avatar-1.jpg" alt="Cat avatar commission for Chase: purple and white with diamond back markings and a black mohawk, shown from the front, back, and side" width="1600" height="900"></button><figcaption><span class="cap-top"><b>Commission for Chase</b><span class="price">$90</span></span><small>Cat · Original character with purple markings</small></figcaption></figure>
+        <figure><button type="button" data-full="assets/avatar-2.jpg" aria-label="View Chase's second cat avatar commission full size"><img src="assets/avatar-2.jpg" alt="Cat avatar commission for Chase: dark purple with round glasses, locs, and a striped tail, shown from the front, back, and side" width="1600" height="900" loading="lazy"></button><figcaption><span class="cap-top"><b>Commission for Chase</b><span class="price">$100</span></span><small>Cat · Original character with purple markings</small></figcaption></figure>
+        <figure><button type="button" data-full="assets/avatar-3.jpg" aria-label="View Birdtheginger's dog avatar commission full size"><img src="assets/avatar-3.jpg" alt="Dog avatar commission for Birdtheginger: gray with a yellow-tipped tail and star accent eyes, shown from the front, back, and side" width="1600" height="900" loading="lazy"></button><figcaption><span class="cap-top"><b>Commission for Birdtheginger</b><span class="price">$80</span></span><small>Dog · Yellow-tipped tail, eye blush, fur paint, star accent eyes</small></figcaption></figure>
+      </div>
+    </div>
+
+    <div class="web-card">
+      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#12264A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></div>
+      <div><h3>Sound Poll</h3><p>A voting site for Forgotten Stories. Visitors listen to sound options, play them all in order, and vote for a favorite, with votes counted live.</p></div>
+      <a href="https://fengyaolin58-cmd.github.io/sound-poll/" target="_blank" rel="noopener">Open Sound Poll →</a>
+    </div>
+
+  </div>
+</section>
+
 <section id="skills">
   <div class="sec-head">
     <span class="label">Skills</span>
@@ -221,6 +277,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
   <div class="links">
     <a href="https://linktr.ee/wvupsc" target="_blank" rel="noopener"><b>Catamount Esports</b><span>Accounts I managed</span></a>
     <a href="https://fengyaolin58-cmd.github.io/sparks/" target="_blank" rel="noopener"><b>Sparks</b><span>Website I built</span></a>
+    <a href="https://fengyaolin58-cmd.github.io/sound-poll/" target="_blank" rel="noopener"><b>Sound Poll</b><span>Voting site I built</span></a>
     <a href="https://www.twitch.tv/kharyvrc" target="_blank" rel="noopener"><b>KharyVRC</b><span>Streamer I moderated for</span></a>
   </div>
 </section>
@@ -246,6 +303,22 @@ document.querySelectorAll('.card button').forEach(function(btn){
     setTimeout(function(){ btn.textContent = original; }, 2000);
   });
 });
+
+(function(){
+  var box=null;
+  function close(){ if(box){ box.remove(); box=null; document.removeEventListener('keydown',onKey); } }
+  function onKey(e){ if(e.key==='Escape') close(); }
+  document.querySelectorAll('.gallery button').forEach(function(b){
+    b.addEventListener('click',function(){
+      close();
+      box=document.createElement('div'); box.className='lightbox'; box.setAttribute('role','dialog'); box.setAttribute('aria-label','Full size image');
+      var img=document.createElement('img'); img.src=b.dataset.full; img.alt=b.querySelector('img').alt;
+      var hint=document.createElement('span'); hint.textContent='Click or press Esc to close';
+      box.appendChild(img); box.appendChild(hint); box.addEventListener('click',close);
+      document.body.appendChild(box); document.addEventListener('keydown',onKey);
+    });
+  });
+})();
 </script>
 </body>
 </html>
